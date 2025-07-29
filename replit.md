@@ -40,8 +40,10 @@ The application uses four main tables:
 
 ### AI Integration
 - **Primary AI Service**: Google Gemini API for conversation generation
-- **Roleplay Scenarios**: Pre-configured prompts for school, store, home, and restaurant scenarios
-- **Multi-language Support**: English, Hindi, Tamil, and Gujarati language interfaces
+- **Language-Specific Responses**: AI responds in user's selected language (English, Hindi, Tamil, Gujarati) for authentic learning experience
+- **Roleplay Scenarios**: Pre-configured prompts for school, store, home, and restaurant scenarios with language-appropriate responses
+- **Multi-language Support**: English, Hindi, Tamil, and Gujarati language interfaces with native script support
+- **Educational Focus**: Responses include English translations and meanings when teaching in native languages
 - **Context-Aware Responses**: Maintains conversation history for coherent interactions
 
 ### Speech Features
@@ -62,10 +64,13 @@ The application uses four main tables:
 1. **User Authentication**: Basic username/password authentication (development phase)
 2. **Conversation Creation**: Users create conversations with language and mode selection
 3. **Message Processing**: 
-   - User input (text or speech) → API validation → Gemini processing → AI response
+   - User input (text or speech) → API validation → Gemini processing with language-specific prompts → AI response in selected language
    - Responses stored in database with conversation context
-4. **Real-time Updates**: TanStack Query manages cache invalidation and UI updates
-5. **Statistics Tracking**: Session metrics updated after each interaction
+4. **Language-Specific AI Responses**: 
+   - English: Full English responses for immersive practice
+   - Hindi/Tamil/Gujarati: Native language responses with English translations and explanations
+5. **Real-time Updates**: TanStack Query manages cache invalidation and UI updates
+6. **Statistics Tracking**: Session metrics updated after each interaction
 
 ## External Dependencies
 
