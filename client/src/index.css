@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(0, 0%, 100%);
+  --foreground: hsl(20, 14.3%, 4.1%);
+  --muted: hsl(60, 4.8%, 95.9%);
+  --muted-foreground: hsl(25, 5.3%, 44.7%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(20, 14.3%, 4.1%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(20, 14.3%, 4.1%);
+  --border: hsl(20, 5.9%, 90%);
+  --input: hsl(20, 5.9%, 90%);
+  --primary: hsl(247, 85%, 63%);
+  --primary-foreground: hsl(211, 100%, 99%);
+  --secondary: hsl(151, 71%, 56%);
+  --secondary-foreground: hsl(24, 9.8%, 10%);
+  --accent: hsl(35, 91%, 48%);
+  --accent-foreground: hsl(60, 9.1%, 97.8%);
+  --destructive: hsl(0, 84.2%, 60.2%);
+  --destructive-foreground: hsl(60, 9.1%, 97.8%);
+  --ring: hsl(20, 14.3%, 4.1%);
+  --radius: 0.5rem;
+}
+
+.dark {
+  --background: hsl(240, 10%, 3.9%);
+  --foreground: hsl(0, 0%, 98%);
+  --muted: hsl(240, 3.7%, 15.9%);
+  --muted-foreground: hsl(240, 5%, 64.9%);
+  --popover: hsl(240, 10%, 3.9%);
+  --popover-foreground: hsl(0, 0%, 98%);
+  --card: hsl(240, 10%, 3.9%);
+  --card-foreground: hsl(0, 0%, 98%);
+  --border: hsl(240, 3.7%, 15.9%);
+  --input: hsl(240, 3.7%, 15.9%);
+  --primary: hsl(247, 85%, 63%);
+  --primary-foreground: hsl(211, 100%, 99%);
+  --secondary: hsl(151, 71%, 56%);
+  --secondary-foreground: hsl(0, 0%, 98%);
+  --accent: hsl(35, 91%, 48%);
+  --accent-foreground: hsl(0, 0%, 98%);
+  --destructive: hsl(0, 62.8%, 30.6%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --ring: hsl(240, 4.9%, 83.9%);
+  --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+}
+
+/* Custom animations for voice recording */
+@keyframes pulse-red {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.animate-pulse-red {
+  animation: pulse-red 1s ease-in-out infinite;
+}
+
+/* Gradient backgrounds */
+.gradient-primary {
+  background: linear-gradient(135deg, hsl(247, 85%, 63%) 0%, hsl(267, 85%, 63%) 100%);
+}
+
+.gradient-secondary {
+  background: linear-gradient(135deg, hsl(151, 71%, 56%) 0%, hsl(171, 71%, 56%) 100%);
+}
+
+/* Voice control styles */
+.voice-recording {
+  @apply bg-red-500 animate-pulse-red;
+}
+
+.voice-idle {
+  @apply bg-primary hover:opacity-90;
+}
+
+/* Chat message styles */
+.message-user {
+  @apply bg-primary text-primary-foreground;
+}
+
+.message-assistant {
+  @apply bg-muted text-muted-foreground;
+}
+
+/* Language flag styles */
+.flag-emoji {
+  @apply text-lg;
+}
