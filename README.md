@@ -19,10 +19,7 @@ Speak Genie is a demonstration of a modern, voice-controlled digital assistant. 
 
 The primary goal of Speak Genie is to create a seamless conversational user experience. It leverages modern web technologies to capture microphone input, communicate with natural language processing (NLP) services, and deliver real-time, audible feedback. This demo serves as a powerful foundation for building more complex voice-activated applications, from smart home controls to accessibility tools.
 
-Here's a glimpse of it in action:
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
-*(You can replace the above with a real screenshot or GIF of your project)*
 
 ## Features
 
